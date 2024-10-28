@@ -1,0 +1,20 @@
+Lab1:
+
+6.1:
+
+What happens if users choose “Cancel”?
+
+Nếu bấm “Cancel” thì chương trình phản hồi rằng mình vừa chọn “No”. 
+Điều này xảy ra bởi hàm JOptionPane.showConfirmDialog sẽ ghi nhận lựa chọn của người dùng:
+ - Nếu người dùng chọn Yes thì JOptionPane.showConfirmDialog sẽ trả về 0.
+ - Nếu người dùng chọn No thì JOptionPane.showConfirmDialog sẽ trả về 1.
+ - Nếu người dùng chọn Cancel thì JOptionPane.showConfirmDialog sẽ trả về 2.
+Và hằng số YES_OPTION có giá trị là 0. Bởi vậy nên chương trình chỉ có thể nhận dạng người dùng có bấm Yes hay không. 
+Nếu người dùng bấm Yes thì trả về chuỗi “Yes” còn bấm lựa chọn ngoài Yes thì sẽ trả về “No”.
+
+How to customize the options to users, e.g. only two options: “Yes” and “No”, OR “I do” and “I don’t”?
+Để hộp thoại chỉ hiển thị 2 nút Yes và No, ta cần thêm tham số JOptionPane.YES_NO_OPTION vào cuối hàm JOptionPane.showConfirmDialog.
+
+Lab2:
+If you create a constructor method to build a DVD by title then create a constructor method to build a DVD by category. Does JAVA allow you to do this?
+Có. Trong Java, có thể định nghĩa nhiều constructor trong cùng một lớp, miễn là danh sách tham số của mỗi constructor khác nhau. Điều này tận dụng cơ chế nạp chồng phương thức, cho phép các constructor cùng tên nhưng khác về kiểu dữ liệu hoặc số lượng tham số 
