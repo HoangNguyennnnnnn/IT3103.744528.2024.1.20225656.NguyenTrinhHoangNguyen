@@ -52,19 +52,5 @@ public class DigitalVideoDisc {
     public int getId() {
         return id;
     }
-
-    //Setter
-    public void setTitle(String title) {
-        this.title = title;
-    }
-    //Method
-    public String toString()
-    {
-        return "DVD - " + title + " - " + category + " - " + director + " - " + length + ": " + cost +" $ ";
-    }
-    public boolean isMatch(String title)
-    {
-        return this.title.equals(title);
-    }
 }
 
