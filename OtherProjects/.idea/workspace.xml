@@ -25,18 +25,24 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/HoangNguyennnnnnn/IT3103.744528.2024.1.20225656.NguyenTrinhHoangNguyen.git",
-    "accountId": "740cecc4-739a-4d7b-ac89-c11c04ce86dc"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/HoangNguyennnnnnn/IT3103.744528.2024.1.20225656.NguyenTrinhHoangNguyen.git&quot;,
+    &quot;accountId&quot;: &quot;740cecc4-739a-4d7b-ac89-c11c04ce86dc&quot;
   }
-}]]></component>
+}</component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "git-widget-placeholder": "topic/memory-management-string",
+    "last_opened_file_path": "C:/Users/admin/Documents/GitHub/IT3103.744528.2024.1.20225656.NguyenTrinhHoangNguyen/AimsProject",
     "node.js.selected.package.tslint": "(autodetect)"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\admin\Documents\GitHub\IT3103.744528.2024.1.20225656.NguyenTrinhHoangNguyen\OtherProjects\src\hust\soict\dsai" />
+    </key>
+  </component>
   <component name="TaskManager">
     <servers />
   </component>
