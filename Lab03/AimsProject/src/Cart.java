@@ -6,6 +6,7 @@ public class Cart {
     private int qtyOrdered = 0;
 
     // Method to add a new DVD
+    // Method 1
     public void addDigitalVideoDisc(DigitalVideoDisc disc)
     {
         if (qtyOrdered < MAX_NUMBERS_ORDERED) {
@@ -14,7 +15,36 @@ public class Cart {
             System.out.println("The disc "+ disc.getTitle() +" has been added");
         }
         else {
-            System.out.println("The cart is full. Can't add "+disc.getTitle());
+            System.out.println("The cart is almost full. Can't add "+disc.getTitle());
+        }
+    }
+    //Method 2
+    public void addDigitalVideoDisc(DigitalVideoDisc [] dvdList)
+    {
+        if (qtyOrdered + dvdList.length < MAX_NUMBERS_ORDERED) {
+            System.arraycopy(dvdList, 0, itemsOrdered, qtyOrdered, dvdList.length);
+
+            qtyOrdered += dvdList.length;
+            System.out.println("The DVD list has been added");
+        }
+        else {
+            System.out.println("The cart is almost full. Can't add list");
+        }
+    }
+    //Method 3
+    public void addDigitalVideoDisc(DigitalVideoDisc dvd1,DigitalVideoDisc dvd2)
+    {
+        if (qtyOrdered < MAX_NUMBERS_ORDERED - 1) {
+            //Add dvd1 and dvd2
+            itemsOrdered[qtyOrdered] = dvd1;
+            itemsOrdered[qtyOrdered+1] = dvd2;
+            //Update quantity
+            qtyOrdered+=2;
+            //Notify
+            System.out.println("The DVD list has been added");
+        }else
+        {
+            System.out.println("The cart is almost full. Can't add list");
         }
     }
     // Method to remove the item passed by argument from the list
