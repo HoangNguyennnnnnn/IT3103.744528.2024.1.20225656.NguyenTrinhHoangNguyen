@@ -1,3 +1,8 @@
+package hust.soict.dsai.test.cart;
+
+import hust.soict.dsai.aims.cart.Cart;
+import hust.soict.dsai.aims.disc.DigitalVideoDisc;
+
 public class CartTest {
     public static void main(String[] args) {
         //Create a new cart
@@ -27,4 +32,5 @@ public class CartTest {
         cart.searchByTitle("Star Wars");
         cart.searchByTitle("Abc");
     }
+
 }

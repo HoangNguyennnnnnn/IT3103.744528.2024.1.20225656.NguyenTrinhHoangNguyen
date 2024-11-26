@@ -1,3 +1,5 @@
+package hust.soict.dsai.aims.disc;
+
 public class DigitalVideoDisc {
     // Attribute
     private static int nbDigitalVideoDiscs = 0;
@@ -33,7 +35,7 @@ public class DigitalVideoDisc {
         this.cost = cost;
         this.id = nbDigitalVideoDiscs++;
     }
-    // Getter
+        // Getter
     public String getTitle() {
         return title;
     }

@@ -1,3 +1,7 @@
+package hust.soict.dsai.test.disc;
+
+import hust.soict.dsai.aims.disc.DigitalVideoDisc;
+
 public class TestPassingParameter {
     public static void main(String[] args) {
         // TODO Auto-generated method stub
@@ -18,11 +22,11 @@ public class TestPassingParameter {
         o2 = tmp;
     }
 
-    public static void swap(DigitalVideoDisc dvd1, DigitalVideoDisc dvd2) {
-        String tempTitle = dvd1.getTitle();
-        dvd1.setTitle(dvd2.getTitle());
-        dvd2.setTitle(tempTitle);
-    }
+//    public static void swap(DigitalVideoDisc dvd1, DigitalVideoDisc dvd2) {
+//        String tempTitle = dvd1.getTitle();
+//        dvd1.setTitle(dvd2.getTitle());
+//        dvd2.setTitle(tempTitle);
+//    }
 
     public static void changeTitle(DigitalVideoDisc dvd,String title) {
         String oldTitle = dvd.getTitle();
