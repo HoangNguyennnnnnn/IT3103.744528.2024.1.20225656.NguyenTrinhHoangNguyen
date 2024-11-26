@@ -1,7 +1,6 @@
 public class Cart {
     // Attribute
     public static final int MAX_NUMBERS_ORDERED = 20;
-    private DigitalVideoDisc []itemsOrdered =
     private DigitalVideoDisc[]itemsOrdered =
             new DigitalVideoDisc[MAX_NUMBERS_ORDERED];
     private int qtyOrdered = 0;
