@@ -31,15 +31,16 @@
     &quot;accountId&quot;: &quot;740cecc4-739a-4d7b-ac89-c11c04ce86dc&quot;
   }
 }</component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;git-widget-placeholder&quot;: &quot;topic/memory-management-string&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "git-widget-placeholder": "topic/memory-management-string",
+    "last_opened_file_path": "C:/Users/admin/Documents/GitHub/IT3103.744528.2024.1.20225656.NguyenTrinhHoangNguyen/AimsProject",
+    "node.js.selected.package.tslint": "(autodetect)"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\admin\Documents\GitHub\IT3103.744528.2024.1.20225656.NguyenTrinhHoangNguyen\OtherProjects\src\hust\soict\dsai\garbage" />
+      <recent name="C:\Users\admin\Documents\GitHub\IT3103.744528.2024.1.20225656.NguyenTrinhHoangNguyen\OtherProjects\src\hust\soict\dsai" />
     </key>
   </component>
   <component name="TaskManager">
