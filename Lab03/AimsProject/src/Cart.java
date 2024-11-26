@@ -1,12 +1,11 @@
 public class Cart {
     // Attribute
     public static final int MAX_NUMBERS_ORDERED = 20;
+    private DigitalVideoDisc []itemsOrdered =
     private DigitalVideoDisc[]itemsOrdered =
             new DigitalVideoDisc[MAX_NUMBERS_ORDERED];
     private int qtyOrdered = 0;
-
     // Method to add a new DVD
-    // Method 1
     public void addDigitalVideoDisc(DigitalVideoDisc disc)
     {
         if (qtyOrdered < MAX_NUMBERS_ORDERED) {
@@ -93,4 +92,3 @@ public class Cart {
         }
     }
 }
-
