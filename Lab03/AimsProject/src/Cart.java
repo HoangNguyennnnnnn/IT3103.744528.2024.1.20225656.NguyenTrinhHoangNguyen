@@ -91,4 +91,43 @@ public class Cart {
             }
         }
     }
+    //Print Cart
+    public void print(){
+        System.out.println("******************************CART******************************");
+        System.out.println("Ordered Items:");
+        for(int i=0;i<qtyOrdered;i++){
+
+            System.out.println(i+". " + itemsOrdered[i].toString());
+        }
+        System.out.println("Total cost :" + totalCost());
+        System.out.println("****************************************************************");
+    }
+    //Search DVD in Cart by ID
+    public void searchByID(int id)
+    {
+        boolean found = false;
+        for(int i=0;i<qtyOrdered;i++){
+            if(itemsOrdered[i].getId() == id)
+            {
+                found = true;
+                System.out.println("DVD founded: " + itemsOrdered[i].toString());
+            }
+        }
+        if(!found)
+        {
+            System.out.println("DVD not found");
+        }
+    }
+    //Search DVD in Cart by Title
+    public void searchByTitle(String title)
+    {
+        for(int i=0;i<qtyOrdered;i++){
+            if(itemsOrdered[i].isMatch(title))
+            {
+                System.out.println("DVD founded: " + itemsOrdered[i].toString());
+                return;
+            }
+        }
+        System.out.println("DVD not found");
+    }
 }
