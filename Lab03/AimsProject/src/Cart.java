@@ -1,7 +1,6 @@
 public class Cart {
     // Attribute
     public static final int MAX_NUMBERS_ORDERED = 20;
-    private DigitalVideoDisc []itemsOrdered =
     private DigitalVideoDisc[]itemsOrdered =
             new DigitalVideoDisc[MAX_NUMBERS_ORDERED];
     private int qtyOrdered = 0;
@@ -101,5 +100,33 @@ public class Cart {
         }
         System.out.println("Total cost :" + totalCost());
         System.out.println("****************************************************************");
+    }
+    //Search DVD in Cart by ID
+    public void searchByID(int id)
+    {
+        boolean found = false;
+        for(int i=0;i<qtyOrdered;i++){
+            if(itemsOrdered[i].getId() == id)
+            {
+                found = true;
+                System.out.println("DVD founded: " + itemsOrdered[i].toString());
+            }
+        }
+        if(!found)
+        {
+            System.out.println("DVD not found");
+        }
+    }
+    //Search DVD in Cart by Title
+    public void searchByTitle(String title)
+    {
+        for(int i=0;i<qtyOrdered;i++){
+            if(itemsOrdered[i].isMatch(title))
+            {
+                System.out.println("DVD founded: " + itemsOrdered[i].toString());
+                return;
+            }
+        }
+        System.out.println("DVD not found");
     }
 }
