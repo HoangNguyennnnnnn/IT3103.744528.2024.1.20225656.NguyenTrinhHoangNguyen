@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2c00c907-13cd-4fbd-bfb1-2f6b3078a166" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/hust/soict/dsai/garbage/ConcatenationInLoops.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hust/soict/dsai/garbage/GarbageCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hust/soict/dsai/garbage/GarbageCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hust/soict/dsai/garbage/NoGarbage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/hust/soict/dsai/garbage/NoGarbage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hust/soict/dsai/garbage/test.txt" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/HoangNguyennnnnnn/IT3103.744528.2024.1.20225656.NguyenTrinhHoangNguyen.git",
+    "accountId": "740cecc4-739a-4d7b-ac89-c11c04ce86dc"
+  }
+}]]></component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "git-widget-placeholder": "topic/memory-management-string",
+    "node.js.selected.package.tslint": "(autodetect)"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <servers />
+  </component>
+</project>
