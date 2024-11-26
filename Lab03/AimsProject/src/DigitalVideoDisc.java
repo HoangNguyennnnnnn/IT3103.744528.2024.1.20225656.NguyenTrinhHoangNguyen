@@ -8,6 +8,7 @@ public class DigitalVideoDisc {
     // Constructor
     public DigitalVideoDisc(String title) {
         this.title = title;
+
     }
     public DigitalVideoDisc(String title, String category, float cost) {
         this.title = title;
@@ -43,5 +44,4 @@ public class DigitalVideoDisc {
     public float getCost() {
         return cost;
     }
-
 }
