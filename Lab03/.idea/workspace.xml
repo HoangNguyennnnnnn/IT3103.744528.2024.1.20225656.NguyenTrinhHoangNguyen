@@ -13,22 +13,25 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "HoangNguyennnnnnn"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;HoangNguyennnnnnn&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/HoangNguyennnnnnn/IT3103.744528.2024.1.20225656.NguyenTrinhHoangNguyen.git",
-    "accountId": "740cecc4-739a-4d7b-ac89-c11c04ce86dc"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/HoangNguyennnnnnn/IT3103.744528.2024.1.20225656.NguyenTrinhHoangNguyen.git&quot;,
+    &quot;accountId&quot;: &quot;740cecc4-739a-4d7b-ac89-c11c04ce86dc&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2pNpS34CTLywQU1uY1Dazyi39P3" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -36,6 +39,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "topic/class-members",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/admin/Documents/GitHub/IT3103.744528.2024.1.20225656.NguyenTrinhHoangNguyen/Lab03/AimsProject",
     "node.js.detected.package.eslint": "true",
