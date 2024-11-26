@@ -1,10 +1,16 @@
+package hust.soict.dsai.aims.cart;
+
+import hust.soict.dsai.aims.disc.DigitalVideoDisc;
+
 public class Cart {
     // Attribute
     public static final int MAX_NUMBERS_ORDERED = 20;
     private DigitalVideoDisc[]itemsOrdered =
             new DigitalVideoDisc[MAX_NUMBERS_ORDERED];
     private int qtyOrdered = 0;
+
     // Method to add a new DVD
+    // Method 1
     public void addDigitalVideoDisc(DigitalVideoDisc disc)
     {
         if (qtyOrdered < MAX_NUMBERS_ORDERED) {
@@ -101,6 +107,7 @@ public class Cart {
         System.out.println("Total cost :" + totalCost());
         System.out.println("****************************************************************");
     }
+
     //Search DVD in Cart by ID
     public void searchByID(int id)
     {
@@ -130,3 +137,4 @@ public class Cart {
         System.out.println("DVD not found");
     }
 }
+
