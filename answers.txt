@@ -22,3 +22,4 @@ Có. Trong Java, có thể định nghĩa nhiều constructor trong cùng một 
 Lab3:
 Is JAVA a Pass by Value or a Pass by Reference programming language?
 Java là pass by value. Khi truyền đối số, Java luôn truyền bản sao của giá trị, nhưng với đối tượng, bản sao này là tham chiếu đến đối tượng, không phải chính đối tượng.
+
