@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1c217ac7-9cf1-48a9-bf36-0d768900777a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DigitalVideoDisc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DigitalVideoDisc.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +49,7 @@
   "keyToString": {
     "Application.Aims.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "feature/search-cart",
+    "git-widget-placeholder": "topic/store",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/admin/Documents/GitHub/IT3103.744528.2024.1.20225656.NguyenTrinhHoangNguyen/Lab03/AimsProject",
     "node.js.detected.package.eslint": "true",
