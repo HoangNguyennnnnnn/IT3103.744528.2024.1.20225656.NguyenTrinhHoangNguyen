@@ -7,7 +7,9 @@
     <list default="true" id="4974eaef-212a-4bab-9d44-abb650d730a1" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/Lab03/AimsProject/src/CartTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab03/AimsProject/src/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab03/AimsProject/src/Cart.java" afterDir="false" />
+
+      <change beforePath="$PROJECT_DIR$/Lab03/AimsProject/src/DigitalVideoDisc.java" beforeDir="false" afterPath="$PROJECT_DIR$/Lab03/AimsProject/src/DigitalVideoDisc.java" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +54,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "feature/search-cart",
+    "git-widget-placeholder": "feature/print-cart",
+
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/admin/Documents/GitHub/IT3103.744528.2024.1.20225656.NguyenTrinhHoangNguyen",
     "node.js.detected.package.eslint": "true",
@@ -83,7 +86,8 @@
       <workItem from="1732602552129" duration="394000" />
       <workItem from="1732602960262" duration="282000" />
       <workItem from="1732603262399" duration="470000" />
-      <workItem from="1732607958812" duration="486000" />
+      <workItem from="1732607958812" duration="315000" />
+
     </task>
     <servers />
   </component>
