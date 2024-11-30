@@ -35,7 +35,8 @@ public class Store {
             System.out.println("DVD not found!");
         }
     }
-    //Print líst DVD in Store
+
+    //Print list DVD in Store
     public void printListDVD(){
         for (int i = 0; i < numberOfItemsInStore; i++){
             System.out.println("DVD: " + itemsInStore[i].toString());
