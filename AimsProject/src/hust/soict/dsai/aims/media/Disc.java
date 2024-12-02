@@ -23,7 +23,7 @@ public class Disc extends Media {
     }
 
     //Constructor
-    public Disc(int length, String director, String id, float title, int category, String cost) {
+    public Disc(int id, String title, String category, float cost, int length, String director) {
         super(id,title,category,cost);
         this.length = length;
         this.director = director;

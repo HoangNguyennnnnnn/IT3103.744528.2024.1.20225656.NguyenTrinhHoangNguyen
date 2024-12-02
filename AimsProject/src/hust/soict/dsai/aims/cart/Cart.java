@@ -1,108 +1,54 @@
 package hust.soict.dsai.aims.cart;
 
-import hust.soict.dsai.aims.media.DigitalVideoDisc;
+import hust.soict.dsai.aims.media.Media;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Cart {
     // Attribute
     public static final int MAX_NUMBERS_ORDERED = 20;
-    private DigitalVideoDisc[]itemsOrdered =
-            new DigitalVideoDisc[MAX_NUMBERS_ORDERED];
-    private int qtyOrdered = 0;
-
-    // Method to add a new DVD
-    // Method 1
-    public void addDigitalVideoDisc(DigitalVideoDisc disc)
-    {
-        if (qtyOrdered < MAX_NUMBERS_ORDERED) {
-            itemsOrdered[qtyOrdered] = disc;
-            qtyOrdered++;
-            System.out.println("The disc "+ disc.getTitle() +" has been added");
-        }
-        else {
-            System.out.println("The cart is almost full. Can't add "+disc.getTitle());
-        }
-    }
-    //Method 2
-    public void addDigitalVideoDisc(DigitalVideoDisc [] dvdList)
-    {
-        if (qtyOrdered + dvdList.length < MAX_NUMBERS_ORDERED) {
-            System.arraycopy(dvdList, 0, itemsOrdered, qtyOrdered, dvdList.length);
-
-            qtyOrdered += dvdList.length;
-            System.out.println("The DVD list has been added");
-        }
-        else {
-            System.out.println("The cart is almost full. Can't add list");
-        }
-    }
-    //Method 3
-    public void addDigitalVideoDisc(DigitalVideoDisc dvd1,DigitalVideoDisc dvd2)
-    {
-        if (qtyOrdered < MAX_NUMBERS_ORDERED - 1) {
-            //Add dvd1 and dvd2
-            itemsOrdered[qtyOrdered] = dvd1;
-            itemsOrdered[qtyOrdered+1] = dvd2;
-            //Update quantity
-            qtyOrdered+=2;
-            //Notify
-            System.out.println("The DVD list has been added");
+    private List<Media> itemsOrdered = new ArrayList<Media>();
+    // Method to add Media to the cart
+    public void addMedia(Media media) {
+        if(itemsOrdered.size() < MAX_NUMBERS_ORDERED) {
+            itemsOrdered.add(media);
+            System.out.println("Added media: " + media);
         }else
         {
-            System.out.println("The cart is almost full. Can't add list");
+            System.out.println("The cart is full. Can't add more media");
         }
     }
-    // Method to remove the item passed by argument from the list
-    public void RemoveDigitalVideoDisc(DigitalVideoDisc disc) {
-        if (qtyOrdered == 0) {
-            System.out.println("Cart is empty. Can't remove "+disc.getTitle());
-            return;
-        }
-        for (int i = 0; i < qtyOrdered && itemsOrdered[i] != null; i++) {
-            if (itemsOrdered[i].equals(disc)) {
-                for (int j = i; j < qtyOrdered-1; j++) {
-                    itemsOrdered[j] = itemsOrdered[j + 1];
-                }
-                itemsOrdered[qtyOrdered-1] = null;
-                System.out.println("The disc " +disc.getTitle() +" has been removed");
-                qtyOrdered--;
+    // Method to delete Media in the cart
+    public void removeMedia(Media media) {
+        //Search for media
+        for(Media item: itemsOrdered) {
+            if(item.equals(media)) {
+                itemsOrdered.remove(media);
+                System.out.println("Removed media: " + media);
                 return;
             }
         }
-        System.out.println("Cart does not contain DVDs "+disc.getTitle());
+        System.out.println("Not found media: "+ media.toString()+". Can't remove media");
+
     }
     // Method to calculate the total cost
     public float totalCost(){
-        if (qtyOrdered == 0) {
+        if (itemsOrdered.isEmpty()) {
             return 0;
         }
         float total = 0;
-        for (int i = 0; i < qtyOrdered && itemsOrdered[i] != null; i++) {
-            total += itemsOrdered[i].getCost();
+        for(Media item : itemsOrdered){
+            total += item.getCost();
         }
         return total;
-    }
-    //Print list DVDs in cart
-    public void printList(){
-        System.out.println("Your cart:");
-        if(qtyOrdered == 0){
-            System.out.println("Cart is empty");
-            return;
-        }else
-        {
-            for(int i=0;i<qtyOrdered;i++){
-                System.out.println((i+1)+":" + itemsOrdered[i].getTitle()+ "-" +
-                        itemsOrdered[i].getCategory() +"-"+itemsOrdered[i].getDirector()+"-"+
-                        itemsOrdered[i].getLength()+"-"+itemsOrdered[i].getCost());
-            }
-        }
     }
     //Print Cart
     public void print(){
         System.out.println("******************************CART******************************");
         System.out.println("Ordered Items:");
-        for(int i=0;i<qtyOrdered;i++){
-
-            System.out.println(i+". " + itemsOrdered[i].toString());
+        for(Media item : itemsOrdered){
+            System.out.println(item.getId() + ". "+item.toString());
         }
         System.out.println("Total cost :" + totalCost());
         System.out.println("****************************************************************");
@@ -112,11 +58,11 @@ public class Cart {
     public void searchByID(int id)
     {
         boolean found = false;
-        for(int i=0;i<qtyOrdered;i++){
-            if(itemsOrdered[i].getId() == id)
+        for(Media item : itemsOrdered){
+            if(item.getId() == id)
             {
                 found = true;
-                System.out.println("DVD founded: " + itemsOrdered[i].toString());
+                System.out.println("DVD founded: " + item.toString());
             }
         }
         if(!found)
@@ -127,10 +73,10 @@ public class Cart {
     //Search DVD in Cart by Title
     public void searchByTitle(String title)
     {
-        for(int i=0;i<qtyOrdered;i++){
-            if(itemsOrdered[i].isMatch(title))
+        for(Media item : itemsOrdered){
+            if(item.isMatch(title))
             {
-                System.out.println("DVD founded: " + itemsOrdered[i].toString());
+                System.out.println("DVD founded: " + item.toString());
                 return;
             }
         }
