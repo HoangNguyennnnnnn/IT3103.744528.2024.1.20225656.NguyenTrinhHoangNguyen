@@ -12,12 +12,20 @@ public class Book extends Media {
     public Book(String title, String category, float cost) {
         super(title, category, cost);
     }
+
+    public Book(String title, String category, float cost,List<String> authors) {
+        super(title, category, cost);
+        this.authors = authors;
+    }
+
     @Override
     //toString
     public String toString()
     {
-        return "BOOK - " +getId() +". "+ getTitle() + " - " + getCategory() + " - "+ authors +": " + getCost() +" $ ";
+        return "BOOK - " +getId() +". "+ getTitle() + " - " + "category: "+getCategory() + " - "+
+                "list authors: "+ authors +": " + "Cost: "+getCost() +" $ ";
     }
+
 
     //Add Authors
     public void addAuthor(String authorName) {

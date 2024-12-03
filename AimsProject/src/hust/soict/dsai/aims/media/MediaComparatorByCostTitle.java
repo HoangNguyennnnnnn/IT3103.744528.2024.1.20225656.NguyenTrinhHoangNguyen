@@ -4,7 +4,7 @@ import java.util.Comparator;
 
 public class MediaComparatorByCostTitle implements Comparator<Media> {
     @Override
-    public int compare(Media m1, Media m2) {
+    public int compare(Media m2, Media m1) {
         if(m1.getCost() > m2.getCost())
         {
             return -1;
