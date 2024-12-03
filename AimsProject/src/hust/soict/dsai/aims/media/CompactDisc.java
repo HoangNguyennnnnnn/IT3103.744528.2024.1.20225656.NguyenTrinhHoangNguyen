@@ -20,6 +20,14 @@ public class CompactDisc extends Disc implements Playable{
         super(title,category,cost,length,director);
         this.artist = artist;
     }
+    //toString
+    @Override
+    public String toString()
+    {
+        return "CD - " + getId() +". "+getTitle() + " - " + getCategory() + " - " + getDirector()+" - " + artist
+            +" - " + tracks + " - " + getLength() + ": " + getCost() +" $ ";
+    }
+
     //addTrack
     public void addTrack(Track track) {
         int index = tracks.indexOf(track);
