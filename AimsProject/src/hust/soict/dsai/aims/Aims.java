@@ -87,7 +87,7 @@ public class Aims {
         System.out.println("Choose a Sort: ");
         System.out.println("-------------------------------");
         System.out.println("1. Media Comparator By Title - Cost");
-        System.out.println("1. Media Comparator By Cost - Title");
+        System.out.println("2. Media Comparator By Cost - Title");
         System.out.println("0. Back");
         System.out.println("-------------------------------");
         System.out.println("Please choose a number: 0-1-2");

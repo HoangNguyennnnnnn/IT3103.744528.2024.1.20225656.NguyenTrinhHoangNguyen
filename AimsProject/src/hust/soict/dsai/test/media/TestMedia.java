@@ -13,7 +13,7 @@ public class TestMedia {
 
         CompactDisc cd = new CompactDisc("CD01","Fantasy",13f,123,"Lucas","John");
         DigitalVideoDisc dvd = new DigitalVideoDisc("DVD Title 1","Action","Director 1",120,15.99f);
-        Book book = new Book("Book Title 1","Fiction",29.99f);
+        Book book = new Book("Book Title 1","Fiction",29.99f,List.of("Robert C. Martin"));
 
         mediae.add(cd);
         mediae.add(dvd);
