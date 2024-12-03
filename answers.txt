@@ -23,3 +23,6 @@ Lab3:
 Is JAVA a Pass by Value or a Pass by Reference programming language?
 Java là pass by value. Khi truyền đối số, Java luôn truyền bản sao của giá trị, nhưng với đối tượng, bản sao này là tham chiếu đến đối tượng, không phải chính đối tượng.
 
+Lab4:
+Trong trường hợp muốn so sánh các đối tượng Media với nhau bằng cách sử dụng Comparable thay vì Comparator, thì thay vì tạo ra các lớp riêng cho từng Comparator, chúng ta cần để lớp Media triển khai interface Comparable.Cách triển khai này giúp chúng ta linh hoạt hơn khi so sánh các đối tượng Media và cung cấp khả năng mở rộng cho các lớp con khác nếu cần thiết.
+
