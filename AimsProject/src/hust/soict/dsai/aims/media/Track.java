@@ -11,7 +11,7 @@ public class Track implements Playable {
         return length;
     }
     //Constructor
-    Track(String title, int length){
+    public Track(int length,String title){
         this.title = title;
         this.length = length;
     }

@@ -7,7 +7,7 @@ public class CompactDisc extends Disc implements Playable{
 
     //Attribute
     private String artist;
-    private List<Track> tracks = new ArrayList<>();
+    private List<Track> tracks = new ArrayList<Track>();
 
     //Getter
     public String getArtist() {
@@ -20,6 +20,24 @@ public class CompactDisc extends Disc implements Playable{
         super(title,category,cost,length,director);
         this.artist = artist;
     }
+<<<<<<< Updated upstream
+=======
+    public CompactDisc(String title,String category,float cost,int length,String director,
+                       String artist, List<Track> tracks) {
+        super(title,category,cost,length,director);
+        this.artist = artist;
+        this.tracks = tracks;
+    }
+    //toString
+    @Override
+    public String toString()
+    {
+        return "CD - " + getId() +". "+getTitle() + " - " + "category: "+getCategory() + " - " +"director: "+ getDirector()+" - " +
+                "artist: "+artist
+            +" - " + "length: "+getLength() + " - cost: " + getCost() +" $ ";
+    }
+
+>>>>>>> Stashed changes
     //addTrack
     public void addTrack(Track track) {
         int index = tracks.indexOf(track);

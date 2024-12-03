@@ -12,6 +12,21 @@ public class Book extends Media {
     public Book(String title, String category, float cost) {
         super(title, category, cost);
     }
+<<<<<<< Updated upstream
+=======
+    public Book(String title, String category, float cost,List<String> authors) {
+        super(title, category, cost);
+        this.authors = authors;
+    }
+
+    @Override
+    //toString
+    public String toString()
+    {
+        return "BOOK - " +getId() +". "+ getTitle() + " - " + "category: "+getCategory() + " - "+
+                "list authors: "+ authors +": " + "Cost: "+getCost() +" $ ";
+    }
+>>>>>>> Stashed changes
 
     //Add Authors
     public void addAuthor(String authorName) {
