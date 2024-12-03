@@ -33,9 +33,7 @@ public class CompactDisc extends Disc implements Playable{
     {
         return "CD - " + getId() +". "+getTitle() + " - " + "category: "+getCategory() + " - " +"director: "+ getDirector()+" - " +
                 "artist: "+artist
-            +" - " + "length: "+getLength() + " - cost: " + getCost() +" $ ";
-    }
-
+                +" - " + "length: "+getLength() + " - cost: " + getCost() +" $ ";
     }
     //addTrack
     public void addTrack(Track track) {
