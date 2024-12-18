@@ -101,7 +101,7 @@ public class Aims {
         Cart cart = new Cart();
         // Example media added to the store
         //Thêm Book vào Store
-//        Book book1 = new Book("Clean Code", "Programming", 45.5f, List.of("Robert C. Martin"));
+        Book book1 = new Book("Clean Code", "Programming", 45.5f, List.of("Robert C. Martin"));
 //        Book book2 = new Book("The Pragmatic Programmer", "Programming", 50.0f, List.of("Andrew Hunt David Thomas"));
 //        Book book3 = new Book("Introduction to Algorithms", "Computer Science", 60.0f, List.of("Thomas H. Cormen Charles E. Leiserson Ronald L. Rivest Clifford Stein"));
 //        Book book4 = new Book("Design Patterns", "Programming", 40.0f, List.of("Erich Gamma Richard Helm Ralph Johnson John Vlissides"));
@@ -155,9 +155,11 @@ public class Aims {
         store.addMedia(cd4);
         store.addMedia(cd5);
 
+        cart.addMedia(book1);
         cart.addMedia(dvd1);
         cart.addMedia(dvd2);
         cart.addMedia(dvd3);
+        cart.addMedia(cd1);
         //
         //Start Menu
         new StoreScreen(store,cart);

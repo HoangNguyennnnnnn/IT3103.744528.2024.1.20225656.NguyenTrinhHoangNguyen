@@ -107,27 +107,6 @@ public class CompactDisc extends Disc implements Playable{
         }
     }
 
-    public String getType() {
-        return "CD";
-    }
-
-    public String getDetails() {
-        StringBuffer tracklist = new StringBuffer();
-        if (!this.tracks.isEmpty()) {
-            tracklist.append(this.tracks.get(0).getTitle());
-            for (int i = 1; i < this.tracks.size(); i++) {
-                tracklist.append(", " + this.tracks.get(i).getTitle());
-            }
-        }
-        return ("Product ID: " + String.valueOf(this.getId())
-                + "\n" + "\t" + "Title: " + this.getTitle()
-                + "\n" + "\t" + "Category: " + this.getCategory()
-                + "\n" + "\t" + "Artist: " + this.getArtist()
-                + "\n" + "\t" + "Director: " + this.getDirector()
-                + "\n" + "\t" + "Tracklist: " + tracklist
-                + "\n" + "\t" + "Length: " + String.valueOf(this.getLength()) + " minutes"
-                + "\n" + "\t" + "Price: $" + String.valueOf(this.getCost()));
-    }
 
 
 }

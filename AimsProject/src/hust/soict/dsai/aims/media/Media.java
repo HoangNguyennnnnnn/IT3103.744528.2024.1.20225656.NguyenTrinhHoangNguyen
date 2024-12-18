@@ -81,6 +81,5 @@ public abstract class Media {
                 ", cost=" + cost +
                 '}';
     }
-    public abstract String getDetails();
 
 }

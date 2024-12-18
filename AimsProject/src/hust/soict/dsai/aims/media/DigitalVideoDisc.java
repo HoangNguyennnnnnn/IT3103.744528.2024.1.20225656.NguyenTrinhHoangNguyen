@@ -1,5 +1,7 @@
 package hust.soict.dsai.aims.media;
 
+import hust.soict.dsai.aims.exception.PlayerException;
+
 public class DigitalVideoDisc extends Disc implements Playable{
     // Constructor
     public DigitalVideoDisc(String title) {
@@ -41,18 +43,13 @@ public class DigitalVideoDisc extends Disc implements Playable{
         return this.getTitle().equals(title);
     }
     //Play
-    public void play()
+    public void play() throws PlayerException
     {
-        System.out.println("Playing DVD: " + this.getTitle());
-        System.out.println("DVD Length: " + this.getLength());
-    }
-
-    public String getDetails() {
-        return ("Product ID: " + String.valueOf(this.getId())
-                + "\n" + "\t" + "Title: " + this.getTitle()
-                + "\n" + "\t" + "Category: " + this.getCategory()
-                + "\n" + "\t" + "Director: " + this.getDirector()
-                + "\n" + "\t" + "Length: " + String.valueOf(this.getLength()) + " minutes"
-                + "\n" + "\t" + "Price: $" + String.valueOf(this.getCost()));
+        if(this.getLength()>0) {
+            System.out.println("Playing DVD: " + this.getTitle());
+            System.out.println("DVD Length: " + this.getLength());
+        }else{
+            throw new PlayerException("DVD Length is zero");
+        }
     }
 }

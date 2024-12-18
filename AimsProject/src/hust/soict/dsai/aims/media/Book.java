@@ -28,22 +28,6 @@ public class Book extends Media {
                 "list authors: "+ authors +": " + "Cost: "+getCost() +" $ ";
     }
 
-    public String getDetails() {
-        StringBuffer authorsList = new StringBuffer();
-        if (this.authors.size() >= 1) {
-            authorsList.append(this.authors.get(0));
-            for (int i = 1; i < this.authors.size(); i++) {
-                authorsList.append(", " + this.authors.get(i));
-            }
-        }
-        return ("Product ID: " + String.valueOf(this.getId())
-                + "\n" + "\t" + "Title: " + this.getTitle()
-                + "\n" + "\t" + "Category: " + this.getCategory()
-                + "\n" + "\t" + "Authors: " + authorsList
-                + "\n" + "\t" + "Price: $" + String.valueOf(this.getCost()));
-    }
-
-
     //Add Authors
     public void addAuthor(String authorName) throws DupplicatedItemException {
         if (authors.contains(authorName)) {
