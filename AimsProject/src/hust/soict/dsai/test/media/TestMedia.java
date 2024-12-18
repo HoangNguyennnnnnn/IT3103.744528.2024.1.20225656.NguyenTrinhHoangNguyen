@@ -8,10 +8,10 @@ import hust.soict.dsai.aims.media.Media;
 import java.util.ArrayList;
 import java.util.List;
 public class TestMedia {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception  {
         List<Media> mediae = new ArrayList<Media>();
 
-        CompactDisc cd = new CompactDisc("CD01","Fantasy",13f,123,"Lucas","John");
+        CompactDisc cd = new CompactDisc("CD01","Fantasy",13f, "Lucas","John");
         DigitalVideoDisc dvd = new DigitalVideoDisc("DVD Title 1","Action","Director 1",120,15.99f);
         Book book = new Book("Book Title 1","Fiction",29.99f,List.of("Robert C. Martin"));
 

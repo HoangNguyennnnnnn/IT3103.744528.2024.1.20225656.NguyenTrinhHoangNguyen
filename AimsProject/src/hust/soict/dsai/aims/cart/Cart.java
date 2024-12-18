@@ -1,6 +1,10 @@
 package hust.soict.dsai.aims.cart;
 
+import hust.soict.dsai.aims.exception.CartFullException;
+import hust.soict.dsai.aims.exception.NonExistingItemException;
 import hust.soict.dsai.aims.media.Media;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -9,37 +13,35 @@ import java.util.List;
 public class Cart {
     // Attribute
     public static final int MAX_NUMBERS_ORDERED = 20;
-    private List<Media> itemsOrdered = new ArrayList<Media>();
+    private ObservableList<Media> itemsOrdered = FXCollections.observableArrayList();
     // Method to add Media to the cart
-    public void addMedia(Media media) {
-        if(media!=null) {
-            if (itemsOrdered.size() < MAX_NUMBERS_ORDERED) {
-                for(Media m: itemsOrdered) {
-                    if(media.equals(m)) {
-                        System.out.println("Media is already in the Cart");
-                        return;
-                    }
-                }
-                itemsOrdered.add(media);
-                System.out.println("Added media: " + media);
-            } else {
-                System.out.println("The cart is full. Can't add more media");
-            }
+    public void addMedia(Media media) throws CartFullException {
+        if (media == null) {
+            System.out.println("Media is null. Cannot add to the cart.");
+            return;
         }
-        System.out.println("Number of DVDs in the current cart: "+ itemsOrdered.size());
-    }
-    // Method to delete Media in the cart
-    public void removeMedia(Media media) {
-        //Search for media
-        for(Media item: itemsOrdered) {
-            if(item.equals(media)) {
-                itemsOrdered.remove(media);
-                System.out.println("Removed media: " + media);
-                return;
-            }
-        }
-        System.out.println("Not found media: "+ media.toString()+". Can't remove media");
 
+        if (itemsOrdered.size() >= MAX_NUMBERS_ORDERED) {
+            throw new CartFullException("The cart is full. Cannot add more media.");
+        }
+
+        if (itemsOrdered.contains(media)) {
+            System.out.println("Media is already in the Cart: " + media);
+            return;
+        }
+
+        itemsOrdered.add(media);
+        System.out.println("Added media: " + media);
+        System.out.println("Number of media items in the current cart: " + itemsOrdered.size());
+    }
+
+    // Method to delete Media in the cart
+    public void removeMedia(Media medium) throws NonExistingItemException {
+        if (this.itemsOrdered.remove(medium)) {
+            System.out.println(medium.getTitle() + " has been removed from the cart.");
+        } else {
+            throw new NonExistingItemException(medium.getTitle() + " is not in the cart.");
+        }
     }
     // Method to calculate the total cost
     public float totalCost(){
@@ -107,6 +109,10 @@ public class Cart {
     public void clear()
     {
         itemsOrdered.clear();
+    }
+    //Getter
+    public ObservableList<Media> getItemsOrdered() {
+        return itemsOrdered;
     }
 }
 

@@ -3,7 +3,7 @@ package hust.soict.dsai.test.disc;
 import hust.soict.dsai.aims.media.DigitalVideoDisc;
 
 public class TestPassingParameter {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception  {
         // TODO Auto-generated method stub
         DigitalVideoDisc jungleDVD = new DigitalVideoDisc("Jungle");
         DigitalVideoDisc cinderellaDVD = new DigitalVideoDisc("Cinderella");

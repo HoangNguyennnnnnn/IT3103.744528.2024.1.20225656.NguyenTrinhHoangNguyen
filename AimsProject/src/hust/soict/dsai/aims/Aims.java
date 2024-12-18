@@ -1,7 +1,11 @@
 package hust.soict.dsai.aims;
 
 import hust.soict.dsai.aims.cart.Cart;
+import hust.soict.dsai.aims.exception.CartFullException;
+import hust.soict.dsai.aims.exception.PlayerException;
 import hust.soict.dsai.aims.media.*;
+import hust.soict.dsai.aims.screen.CartScreen;
+import hust.soict.dsai.aims.screen.StoreScreen;
 import hust.soict.dsai.aims.store.Store;
 
 import java.util.Arrays;
@@ -92,22 +96,21 @@ public class Aims {
         System.out.println("-------------------------------");
         System.out.println("Please choose a number: 0-1-2");
     }
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) throws Exception {
         Store store = new Store();
         Cart cart = new Cart();
         // Example media added to the store
         //Thêm Book vào Store
-        Book book1 = new Book("Clean Code", "Programming", 45.5f, List.of("Robert C. Martin"));
-        Book book2 = new Book("The Pragmatic Programmer", "Programming", 50.0f, List.of("Andrew Hunt David Thomas"));
-        Book book3 = new Book("Introduction to Algorithms", "Computer Science", 60.0f, List.of("Thomas H. Cormen Charles E. Leiserson Ronald L. Rivest Clifford Stein"));
-        Book book4 = new Book("Design Patterns", "Programming", 40.0f, List.of("Erich Gamma Richard Helm Ralph Johnson John Vlissides"));
-        Book book5 = new Book("Artificial Intelligence: A Modern Approach", "AI", 70.0f, List.of("Stuart Russell Peter Norvig"));
-        store.addMedia(book1);
-        store.addMedia(book2);
-        store.addMedia(book3);
-        store.addMedia(book4);
-        store.addMedia(book5);
+//        Book book1 = new Book("Clean Code", "Programming", 45.5f, List.of("Robert C. Martin"));
+//        Book book2 = new Book("The Pragmatic Programmer", "Programming", 50.0f, List.of("Andrew Hunt David Thomas"));
+//        Book book3 = new Book("Introduction to Algorithms", "Computer Science", 60.0f, List.of("Thomas H. Cormen Charles E. Leiserson Ronald L. Rivest Clifford Stein"));
+//        Book book4 = new Book("Design Patterns", "Programming", 40.0f, List.of("Erich Gamma Richard Helm Ralph Johnson John Vlissides"));
+//        Book book5 = new Book("Artificial Intelligence: A Modern Approach", "AI", 70.0f, List.of("Stuart Russell Peter Norvig"));
+//        store.addMedia(book1);
+//        store.addMedia(book2);
+//        store.addMedia(book3);
+//        store.addMedia(book4);
+//        store.addMedia(book5);
 
         //Thêm DVD vào Store
         DigitalVideoDisc dvd1 = new DigitalVideoDisc( "The Matrix", "Science Fiction", "Lana Wachowski", 136, 15.0f);
@@ -151,7 +154,13 @@ public class Aims {
         store.addMedia(cd3);
         store.addMedia(cd4);
         store.addMedia(cd5);
+
+        cart.addMedia(dvd1);
+        cart.addMedia(dvd2);
+        cart.addMedia(dvd3);
+        //
         //Start Menu
+        new StoreScreen(store,cart);
 
         do {
             showMenu();

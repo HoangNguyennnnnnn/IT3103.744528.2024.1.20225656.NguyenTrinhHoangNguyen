@@ -2,7 +2,7 @@ package hust.soict.dsai.aims.media;
 
 import java.util.Comparator;
 
-public class Media {
+public abstract class Media {
     //Attribute
     private static int nbMedia = 0;
     private int id;
@@ -19,6 +19,9 @@ public class Media {
         this.title = title;
         this.category = category;
         this.cost = cost;
+    }
+    public Media(String title) {
+        this.title = title;
     }
 
     public Media() {
@@ -57,15 +60,19 @@ public class Media {
         return this.getTitle().equals(title);
     }
     @Override
-    public boolean equals(Object o){
-        Media media = (Media) o;
-        try{
-            String title = media.getTitle();
-            return title.equals(this.getTitle());
-        } catch (NullPointerException e){
+    public boolean equals(Object object){
+        if (object instanceof Media) {
+            try {
+                Media that = (Media) object;
+                return this.title.equalsIgnoreCase(that.getTitle());
+            } catch (NullPointerException | ClassCastException e1) {
+                return false;
+            }
+        } else {
             return false;
         }
     }
+
     public String toString() {
         return "Media{" +
                 "id=" + id + '\'' +
@@ -74,4 +81,6 @@ public class Media {
                 ", cost=" + cost +
                 '}';
     }
+    public abstract String getDetails();
+
 }
