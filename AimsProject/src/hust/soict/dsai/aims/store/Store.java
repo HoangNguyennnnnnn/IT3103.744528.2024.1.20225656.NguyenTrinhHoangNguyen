@@ -1,5 +1,6 @@
 package hust.soict.dsai.aims.store;
 
+import hust.soict.dsai.aims.exception.DupplicatedItemException;
 import hust.soict.dsai.aims.media.Media;
 
 import java.util.ArrayList;
@@ -7,20 +8,21 @@ import java.util.List;
 
 public class Store {
     //Attribute
-    private List<Media> itemsInStore = new ArrayList<Media>();
+    private ArrayList<Media> itemsInStore = new ArrayList<Media>();
     //Add DVD to Store
-    public void addMedia(Media media) {
-        if(media != null) {
-            for(Media m : itemsInStore) {
-                if(media.equals(m)) {
-                    System.out.println("Media is already in the store");
-                    return;
+    public void addMedia(Media media) throws DupplicatedItemException {
+        if (media != null) {
+            for (Media m : itemsInStore) {
+                if (media.equals(m)) {
+                    // Nếu media đã có trong store, ném ngoại lệ DupplicatedItemException
+                    throw new DupplicatedItemException("Media " + media.getTitle() + " is already in the store.");
                 }
             }
             itemsInStore.add(media);
             System.out.println("Added media: " + media);
         }
     }
+
     //Remove DVD in Store
     public void removeMedia(Media media) {
         for(Media item: itemsInStore) {
@@ -60,5 +62,13 @@ public class Store {
                 }
             }
         return null;
+    }
+    //Getter and Setter
+    public ArrayList<Media> getItemsInStore() {
+        return itemsInStore;
+    }
+
+    public void setItemsInStore(ArrayList<Media> itemsInStore) {
+        this.itemsInStore = itemsInStore;
     }
 }
