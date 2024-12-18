@@ -111,7 +111,7 @@ public class AddCDToStoreScreenController extends AddItemToStoreScreenController
             } catch (NumberFormatException e) {
             } finally {
                 tracks.add(new Track(length, title));
-                if (tfTracks.getText().length() == 0) {
+                if (tfTracks.getText().isEmpty()) {
                     tfTracks.setText(title + ": " + length);
                 } else {
                     tfTracks.setText(tfTracks.getText() + ", " + title + ": " + length);
